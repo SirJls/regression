@@ -1,0 +1,30 @@
+cabal-version:       >=1.10
+
+name:                regression
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              Joris Sparreboom
+maintainer:          jlssparreboom@gmail.com
+-- copyright:
+category:            Development
+build-type:          Simple
+extra-source-files:  CHANGELOG.md
+
+executable regression
+  main-is:             Main.hs
+  other-modules:       Regression, Regression.Main
+  ghc-options:         -O2
+  -- other-extensions:
+  build-depends:       base >=4.7 && < 5
+                     , genetic-algorithm
+                     , cassava >= 0.5
+                     , vector >= 0.11
+                     , bytestring >= 0.10.4
+                     , bed-and-breakfast
+                     , statistics
+                     , filepath
+                     , decimal-arithmetic
+                     , optparse-applicative
+  hs-source-dirs:      ., src
+  default-language:    Haskell2010
